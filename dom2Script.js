@@ -74,10 +74,12 @@ let elementToCreate = [
 
 for (let x of elementToCreate){
     let label_createFunCall = label_create(x.tag1, x.for, x.common, x.content)
-    let input_createFunCall = input_create(x.tag2, x.type, x.text, x.id, x.common)
     let breaktag_createFunCall = breaktag_create(x.tag3)
-    document.body.append(label_createFunCall, input_createFunCall, breaktag_createFunCall)
+    let input_createFunCall = input_create(x.tag2, x.type, x.text, x.id, x.common)
+    let breaktag_createFunCall1 = breaktag_create(x.tag3)
+    document.body.append(label_createFunCall, breaktag_createFunCall, input_createFunCall, breaktag_createFunCall1)
 }
+
 
 var buttonTag = document.createElement("button")
 buttonTag.type = "button"
